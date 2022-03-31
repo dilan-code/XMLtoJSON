@@ -1,0 +1,100 @@
+<ns1:Transport collaboration="Instruction" messageFunction="Instruction" messageId="afbda301-6d77-4a71-b491-033e16b06da5" testIndicator="NO" xmlns:ns1="http://bring.com/TransportV13R0i">
+  <MessageDetails>
+    <MessageSender partyId="9123456789" idType="30" />
+    <MessageRecipient partyId="984661185" idType="30" />
+    <MessageDate>2021-05-10T13:50:00</MessageDate>
+    <BrokerActions>
+      <PerformingUnit>BringMB</PerformingUnit>
+      <ActionType>Transform</ActionType>
+      <PreviousFormat version="D04A_BIG14">IFTMIN</PreviousFormat>
+      <ActionDateTime>2021-05-10T13:51:18</ActionDateTime>
+    </BrokerActions>
+    <Handling>
+      <Subscriber>Direct</Subscriber>
+      <Router>LM</Router>
+      <CopyRecipient />
+      <Parameter />
+      <MergeValues>
+        <MergeOne />
+        <MergeTwo></MergeTwo>
+        <MergeThree></MergeThree>
+      </MergeValues>
+    </Handling>
+  </MessageDetails>
+  <ConsignmentStructure structureType="Single">
+    <ConsignmentSet updateIndicator="Original">
+      <Consignment consignmentId="70734567890123456" idType="610">
+        <ControlTotals>
+          <NumberOfPackages unitCode="PCE">1</NumberOfPackages>
+          <GrossWeight unitCode="KGM">0.001</GrossWeight>
+        </ControlTotals>
+        <Reference referenceType="ANT">
+          <ReferenceNo>100012345</ReferenceNo>
+        </Reference>
+        <Reference referenceType="CMR">
+          <ReferenceNo>70734567890123456</ReferenceNo>
+        </Reference>
+        <Reference referenceType="CU">
+          <ReferenceNo>100012345</ReferenceNo>
+        </Reference>
+        <Reference referenceType="DM">
+          <ReferenceNo>70734567890123456</ReferenceNo>
+        </Reference>
+      </Consignment>
+      <DateAndTimes subClass="DocumentDate">
+        <Date>2021-05-10</Date>
+        <Time>13:13:00</Time>
+      </DateAndTimes>
+      <Party subClass="Consignor" partyId="12345678" idType="87">
+        <Name>Test Sender AB</Name>
+        <Address subClass="PhysicalAddress">
+          <Street>Kungsgatan 42</Street>
+          <PostalCode>11135</PostalCode>
+          <City>Stockholm</City>
+          <CountryCode>SE</CountryCode>
+        </Address>
+      </Party>
+      <Party subClass="Consignee">
+        <Name>Test Recipient AB</Name>
+        <Address subClass="PhysicalAddress">
+          <Street>Bordsvägen 3</Street>
+          <PostalCode>55652</PostalCode>
+          <City>Jönköping</City>
+          <CountryCode>SE</CountryCode>
+        </Address>
+        <Contact contactFunction="IC">
+          <ComDetails comType="Phone">+467012345678</ComDetails>
+          <ComDetails comType="Email">test.recipient@bring.com</ComDetails>
+        </Contact>
+      </Party>
+      <Party subClass="FreightPayer" partyId="12345678" idType="87" />
+      <Party subClass="TransportCompany" partyId="NPB" idType="87" />
+      <TransportLeg>
+        <TransportLegType>20</TransportLegType>
+        <ModeOfTransport />
+        <MeansOfTransport>
+          <MeansOfTransportType>31</MeansOfTransportType>
+        </MeansOfTransport>
+      </TransportLeg>
+      <Service>
+        <BasicServiceCode>5800</BasicServiceCode>
+        <ProductId>5800</ProductId>
+      </Service>
+      <TermsOfDelivery termsType="Freightterms">
+        <TODConditionCode>Prepaid</TODConditionCode>
+      </TermsOfDelivery>
+      <GoodsItemSet>
+        <GoodsItem goodsItemId="1">
+          <GoodsItemTotals>
+            <NumberOfPackages>1</NumberOfPackages>
+            <GrossWeight unitCode="KGM">0.001</GrossWeight>
+          </GoodsItemTotals>
+          <PackageTypeCode>PC</PackageTypeCode>
+        </GoodsItem>
+        <Package packageId="370756789012345678" idType="30">
+          <PackageTypeCode>PC</PackageTypeCode>
+        </Package>
+      </GoodsItemSet>
+    </ConsignmentSet>
+  </ConsignmentStructure>
+</ns1:Transport>

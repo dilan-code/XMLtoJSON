@@ -1,0 +1,99 @@
+<ns1:Transport collaboration="Instruction" messageFunction="Instruction" messageId="238327466" testIndicator="NO" xmlns:ns1="http://bring.com/TransportV13R0i">
+  <MessageDetails>
+    <MessageSender partyId="9123456789" idType="30">
+      <Contact contactFunction="BK">
+        <ContactName>IT avdeling</ContactName>
+        <ComDetails comType="Email">test@test.com</ComDetails>
+      </Contact>
+    </MessageSender>
+    <MessageRecipient partyId="7080000950171" idType="14" />
+    <MessageDate>2021-05-10T13:17:10</MessageDate>
+    <Handling>
+      <Subscriber>Direct</Subscriber>
+      <Router>PreCustoms</Router>
+      <CopyRecipient />
+      <Parameter>CustomerJobV13R0ToV13R0i</Parameter>
+      <MergeValues>
+        <MergeOne>12345678901</MergeOne>
+        <MergeTwo>%c6267d7b-1c71-4892-9</MergeTwo>
+        <MergeThree>7035</MergeThree>
+      </MergeValues>
+    </Handling>
+  </MessageDetails>
+  <ConsignmentStructure structureType="Single">
+    <ConsignmentSet updateIndicator="Original">
+      <Consignment consignmentId="70723456789012345" idType="730">
+        <ControlTotals>
+          <NumberOfPackages unitCode="PCE">1</NumberOfPackages>
+          <GrossWeight unitCode="KGM">1.57</GrossWeight>
+        </ControlTotals>
+        <Reference referenceType="CU">
+          <ReferenceNo>F123456</ReferenceNo>
+        </Reference>
+      </Consignment>
+      <DateAndTimes subClass="DocumentDate">
+        <Date>2021-05-10</Date>
+      </DateAndTimes>
+      <Party subClass="Consignor" partyId="20001234567" idType="87">
+        <Name>Test Sender AS</Name>
+        <Address subClass="PhysicalAddress">
+          <Street>Snipetjernveien 1</Street>
+          <PostalCode>1405</PostalCode>
+          <City>Langhus</City>
+          <CountryCode>NO</CountryCode>
+        </Address>
+      </Party>
+      <Party subClass="Consignee">
+        <Name>Test Recipient</Name>
+        <Address subClass="PhysicalAddress">
+          <Street>TORS VEG 8</Street>
+          <PostalCode>7035</PostalCode>
+          <City>TRONDHEIM</City>
+          <CountryCode>NO</CountryCode>
+        </Address>
+        <Contact>
+          <ContactName>Test Recipient</ContactName>
+          <ComDetails comType="CellPhone">+4791234567</ComDetails>
+        </Contact>
+      </Party>
+      <Party subClass="FreightPayer" partyId="20004695266" idType="87" />
+      <Party subClass="TransportCompany" partyId="BPN" idType="87" />
+      <Party subClass="GoodsReturnParty">
+        <Name>Logistikksenter Oslo</Name>
+        <Address subClass="PhysicalAddress">
+          <PostalCode>0040</PostalCode>
+          <City>OSLO</City>
+          <CountryCode>NO</CountryCode>
+        </Address>
+      </Party>
+      <TransportLeg>
+        <TransportLegType>20</TransportLegType>
+        <ModeOfTransport>3</ModeOfTransport>
+        <MeansOfTransport>
+          <MeansOfTransportType>31</MeansOfTransportType>
+        </MeansOfTransport>
+      </TransportLeg>
+      <Service>
+        <BasicServiceCode>3584</BasicServiceCode>
+        <AdditionalService>
+          <AdditionalServiceCode>1091</AdditionalServiceCode>
+        </AdditionalService>
+        <AdditionalService>
+          <AdditionalServiceCode>1081</AdditionalServiceCode>
+        </AdditionalService>
+      </Service>
+      <GoodsItemSet sequence="1">
+        <GoodsItem goodsItemId="1">
+          <GoodsItemTotals>
+            <NumberOfPackages unitCode="PCE">1</NumberOfPackages>
+            <GrossWeight unitCode="KGM">1.57</GrossWeight>
+          </GoodsItemTotals>
+          <PackageTypeCode>PK</PackageTypeCode>
+        </GoodsItem>
+        <Package packageId="LA123456789NO" idType="28">
+          <PackageTypeCode>PK</PackageTypeCode>
+        </Package>
+      </GoodsItemSet>
+    </ConsignmentSet>
+  </ConsignmentStructure>
+</ns1:Transport>

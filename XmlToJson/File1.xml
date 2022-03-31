@@ -1,0 +1,129 @@
+<ns1:Transport collaboration="Instruction" messageFunction="Instruction" testIndicator="NO" messageId="00376516406000" xmlns:ns1="http://bring.com/TransportV13R0i">
+<MessageDetails>
+	<MessageSender partyId="953675080" idType="30">
+      <Contact contactFunction="">
+        <ContactName>Bring Test</ContactName>
+        <ComDetails comType="Phone">1234567</ComDetails>
+      </Contact>
+      <OriginatingSystem>
+        <SystemId>BRINGMB</SystemId>
+      </OriginatingSystem>
+    </MessageSender>
+	<MessageRecipient partyId="7080000950171" idType="14" />
+	<MessageDate>2021-05-10T13:45:00</MessageDate>
+	<BrokerActions>
+      <PerformingUnit>ERGOFMS</PerformingUnit>
+      <ActionType>Transform</ActionType>
+      <PreviousFormat version="BIG14IFTMIN">EDIFACT</PreviousFormat>
+      <ActionDateTime>2021-05-10T13:45:06</ActionDateTime>
+    </BrokerActions><BrokerActions>
+      <PerformingUnit>BringMB</PerformingUnit>
+      <ActionType>Transform</ActionType>
+      <PreviousFormat version="R3 to V13R0i (Common Map)">BringXML#Transport</PreviousFormat>
+      <ActionDateTime>2021-05-10T13:47:30</ActionDateTime>
+    </BrokerActions>
+	<Handling>
+		<Subscriber>Direct</Subscriber>
+		<Router>Amphora</Router>
+		<CopyRecipient>LM</CopyRecipient>
+		<Parameter />
+		<MergeValues>
+			<MergeOne />
+			<MergeTwo></MergeTwo>
+			<MergeThree></MergeThree>
+		</MergeValues>
+	</Handling>
+  </MessageDetails>
+  <ConsignmentStructure structureType="Single"><ConsignmentSet updateIndicator="Original">
+      <Consignment consignmentId="70712345678901234" idType="730">
+        <ControlTotals>
+          <NumberOfPackages>2</NumberOfPackages>
+          <GrossWeight unitCode="KGM">70</GrossWeight>
+        </ControlTotals>
+        <Reference referenceType="CMR">
+          <ReferenceNo>70713245679801234</ReferenceNo>
+        </Reference>
+        <Reference referenceType="CU">
+          <ReferenceNo>41234</ReferenceNo>
+        </Reference>
+        <Reference referenceType="ANT">
+          <ReferenceNo>4123456</ReferenceNo>
+        </Reference>
+        <Reference referenceType="DM">
+          <ReferenceNo>70712345678901234</ReferenceNo>
+        </Reference>
+      </Consignment>
+      <DateAndTimes subClass="DocumentDate">
+        <Date>2021-05-10</Date>
+        <Time>00:00:00</Time>
+      </DateAndTimes>
+      <Party subClass="Consignor" partyId="00000012345" idType="87" subPartyId="1000">
+        <Name>Test Sender AS</Name>
+        <Address subClass="PhysicalAddress">
+          <Street>Biskop Gunnerus Gate 14</Street>
+          <PostalCode>0001</PostalCode>
+          <City>Oslo</City>
+          <CountryCode>NO</CountryCode>
+        </Address>
+        <Contact contactFunction="IC">
+          <ContactName>Ole Nordman</ContactName>
+          <ComDetails comType="Phone">91123456</ComDetails>
+          <ComDetails comType="Email">test@posten.no</ComDetails>
+        </Contact>
+      </Party>
+      <Party subClass="Consignee">
+        <Name>Test Recipient</Name>
+        <Address subClass="PhysicalAddress">
+          <Street>Birger Hatlebakks Veg 8</Street>
+          <PostalCode>6415</PostalCode>
+          <City>MOLDE</City>
+          <CountryCode>NO</CountryCode>
+        </Address>
+        <Contact contactFunction="IC">
+          <ContactName>Trond Nordman</ContactName>
+        </Contact>
+      </Party>
+      <Party subClass="FreightPayer" partyId="00000012345" idType="87" subPartyId="1000" />
+      <Party subClass="DeliveryParty">
+        <Name>Test Recipient</Name>
+        <Address subClass="PhysicalAddress">
+          <Street>Birger Hatlebakks Veg 8</Street>
+          <PostalCode>6415</PostalCode>
+          <City>MOLDE</City>
+          <CountryCode>NO</CountryCode>
+        </Address>
+      </Party>
+      <Party subClass="TransportCompany" partyId="BCN" idType="87" subPartyId="1000" />
+      <TransportLeg>
+        <TransportLegType>20</TransportLegType>
+        <ModeOfTransport>3</ModeOfTransport>
+      </TransportLeg>
+      <Service>
+        <BasicServiceCode>3050</BasicServiceCode>
+		<ProductId>5100</ProductId>
+        <TariffReference>GNCG</TariffReference>
+        <NatureOfCargo>12</NatureOfCargo>
+        <Priority>Normal</Priority>
+      </Service>
+      <TermsOfDelivery termsType="Freightterms">
+        <TODConditionCode>Prepaid</TODConditionCode>
+      </TermsOfDelivery>
+      <GoodsItemSet>
+        <GoodsItem goodsItemId="1">
+          <GoodsItemTotals>
+            <NumberOfPackages>2</NumberOfPackages>
+            <GrossWeight unitCode="KGM">70</GrossWeight>
+          </GoodsItemTotals>
+          <PackageTypeCode>CT</PackageTypeCode>
+          <GoodsDescription>Kolli</GoodsDescription>
+        </GoodsItem>
+        <Package idType="30" packageId="370712345678901234">
+          <PackageTypeCode>CT</PackageTypeCode>
+        </Package>
+        <Package idType="30" packageId="370723456789012345">
+          <PackageTypeCode>CT</PackageTypeCode>
+        </Package>
+      </GoodsItemSet>
+    </ConsignmentSet>
+	</ConsignmentStructure>
+</ns1:Transport>
